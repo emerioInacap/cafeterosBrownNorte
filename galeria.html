@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteros de Nuñoa</title>
+    <link rel="stylesheet" href="./styles.css"> <!-- Css Externo  -->
+    <style>
+        /* ---------------------------- CSS INTERNO ------------------------- */        
+        /* ------------------------------Globales---------------------------  */
+
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        *,*:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.6rem;
+            background-color: #ebe7de;
+        }
+        p {
+            color: black;
+            font-size: 1.6rem;
+            line-height: 2;
+        }
+        .contenedor {
+            width: 95%;
+            max-width: 120rem;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header header-galeria">
+        <div class="contenido-header contenedor">
+            <div class="barra">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo cafeteria">
+                </div>
+
+                <nav class="nav-principal">
+                    <a href="index.html">Inicio</a> 
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="proceso.html">Proceso</a>
+                    <a href="menu.html">Menú</a>
+                    <a class="activo" href="galeria.html">Galería</a>
+                    <a href="contacto.html">Contacto</a> <!-- Css en Linea -->
+                </nav>
+            </div>
+
+            <div class="texto-header">
+                <h1>Cafeteros de Nuñoa</h1>
+            </div>
+        </div>
+    </header>
+    
+    <main class="contenedor contenido-principal">
+        <h2><span>Vive la</span> experiencia </h2>
+
+        <div class="galeria">
+            <div class="imagen">
+                <img src="./img/galeria/galeria_01.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_02.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_03.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_04.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_05.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_06.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_07.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_08.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_09.webp" alt="galeria">
+            </div>
+            <div class="imagen">
+                <img src="./img/galeria/galeria_10.webp" alt="galeria">
+            </div>
+        </div>
+
+        <div class="subir">
+            <a href="#">Ir Arriba</a>
+        </div>
+    </main>
+
+    
+    
+
+    
+
+    <footer class="footer">
+        <div class="contenedor contenido-footer bg-white">
+            <div class="footer-box ubicacion">
+                <h3>Ubicación</h3>
+                <p>Brown Norte. 290, Nuñoa</p>
+                <p>Inacap</p>
+            </div>
+            <div class="footer-box reservacion">
+                <h3>Reservación</h3>
+                <p>Mail. emerio.suarez@inacapmail.cl</p>
+                <a href="mailto:emerio.suarez@inacapmail.cl">Escribir</a>
+            </div>
+            <div class="footer-box horario">
+                <h3>Horario</h3>
+                <p>Lun-Jue: 14:00 - 17:00</p>
+                <p>Vie-Sab: 12:40 - 14:00</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+        </div>
+        <p class="copyright"> Emerio Suarez </p>
+    </footer>
+
+    
+    
+</body>
+</html>

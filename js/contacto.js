@@ -12,6 +12,8 @@ const hora = document.querySelector('#hora');
 const fecha = document.querySelector('#fecha');
 
 
+
+
 eventListeners()
 function eventListeners(){
     //cuando la app inicia
@@ -23,8 +25,13 @@ function eventListeners(){
     hora.addEventListener('blur', validarFormulario);
     fecha.addEventListener('blur', validarFormulario);
     nombre.addEventListener('blur', validarFormulario);
+
+
+    
 }
 
+
+//-------FUNCIONES --------
 
 function iniciarApp(){
     btnEnviar.disabled = true;
@@ -35,9 +42,6 @@ function iniciarApp(){
 
 function validarFormulario(e){
 
-    
-
-    
     if(e.target.value.length > 0) {
 
         //eliminar los errores
@@ -80,3 +84,6 @@ function mostrarError(mensaje){
 
     
 }
+
+
+

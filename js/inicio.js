@@ -3,7 +3,7 @@
 const carrito = document.querySelector('#carrito');
 const listaProductos = document.querySelector('#lista-productos');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
-const vaciarCarrito = document.querySelector('#vaciar-carrito');
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 let articulosCarrito = [];
 
 
@@ -15,6 +15,9 @@ function eventListeners(){
 
     //Cuando se presiona para agregar carrito
     listaProductos.addEventListener('click', agregarProducto);
+
+    // cuando se elimina un curso del carrito
+    carrito.addEventListener('click', eliminarProducto);
 }
 
 
@@ -73,31 +76,49 @@ function leerDatosProducto(producto){
 //Muestra los productos seleccionados en el carrito
 function carritoHTML(){
 
-   // vaciarCarrito(); // Limpia productos duplicados
+    vaciarCarrito(); // Limpia productos duplicados
     
     articulosCarrito.forEach( producto => {
         
         const row = document.createElement('tr');
         row.innerHTML = ` 
             <td>
-                <img src="${producto.imagen}" width=100>
+                <img src="${producto.imagen}" width=80>
             </td>
             <td>${producto.nombre}</td>
             <td>${producto.precio}</td>
             <td>${producto.cantidad}</td>
-            
+            <td>
+                <a href="#" class="borrar-producto" data-id="${producto.id}">X</a>
+            </td>
         `;
         
         contenedorCarrito.appendChild(row);
-        console.log(contenedorCarrito)
+        
     } )
 
 }
 
 // Elimina los cursos del carrito en el DOM
-/*function vaciarCarrito() {
+function vaciarCarrito() {
 
-    console.log('limpiando')
+    while(contenedorCarrito.firstChild){
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+    }
 }
 
-*/
+// Elimina el producto seleccionado en el DOM
+
+
+function eliminarProducto(e){
+    e.preventDefault()
+    if(e.target.classList.contains('borrar-producto')) {
+        const productoId = e.target.getAttribute('data-id')
+
+        //eliminar del arreglo carrito
+        articulosCarrito = articulosCarrito.filter( producto => producto.id !== productoId )
+
+        carritoHTML();
+    }
+}
+
